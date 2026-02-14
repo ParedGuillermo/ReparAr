@@ -1,15 +1,18 @@
 function Students() {
+  const whatsappMessage = encodeURIComponent(
+    "Hola ReparAr, quiero consultar por soporte técnico para mi notebook de estudio.",
+  );
+
   return (
     <section className="py-24 px-6 bg-[#0b1120] text-white">
       <div className="max-w-6xl mx-auto">
-
-        <div className="text-center mb-16">
+        <div className="mb-16 text-center">
           <h2 className="text-4xl font-bold">
             Soporte técnico para{" "}
             <span className="text-primary">Estudiantes de Sistemas</span>
           </h2>
 
-          <p className="mt-6 text-gray-400 max-w-2xl mx-auto">
+          <p className="max-w-2xl mx-auto mt-6 text-gray-400">
             Soy estudiante de Lic. en Sistemas de la Información y sé lo
             importante que es no quedarse sin notebook en plena cursada.
             Reparaciones responsables, mantenimiento y optimización
@@ -17,11 +20,10 @@ function Students() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10">
-
+        <div className="grid gap-10 md:grid-cols-2">
           {/* Servicios */}
           <div className="bg-[#1e293b] p-8 rounded-xl shadow-lg">
-            <h3 className="text-2xl font-semibold mb-6 text-primary">
+            <h3 className="mb-6 text-2xl font-semibold text-primary">
               Servicios para notebooks
             </h3>
 
@@ -36,8 +38,8 @@ function Students() {
           </div>
 
           {/* Beneficios */}
-          <div className="bg-primary text-black p-8 rounded-xl shadow-lg flex flex-col justify-center">
-            <h3 className="text-2xl font-bold mb-6">
+          <div className="flex flex-col justify-center p-8 text-black shadow-lg bg-primary rounded-xl">
+            <h3 className="mb-6 text-2xl font-bold">
               Beneficio exclusivo estudiantes
             </h3>
 
@@ -50,17 +52,15 @@ function Students() {
             </p>
 
             <a
-              href="https://wa.me/5491170607386"
+              href={`https://wa.me/5491170607386?text=${whatsappMessage}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-black text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition text-center"
+              className="px-6 py-3 font-semibold text-center text-white transition bg-black rounded-lg hover:opacity-90"
             >
               Consultar reparación
             </a>
           </div>
-
         </div>
-
       </div>
     </section>
   );
