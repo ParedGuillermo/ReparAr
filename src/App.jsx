@@ -6,7 +6,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
-import Sorteos from './components/Sorteos'; // Tu nueva grilla 00-99
+import Sorteos from './components/Sorteos'; // Componente de Cilindro de Datos
 import Students from './components/Students';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
@@ -18,16 +18,19 @@ import AdminPanel from './components/AdminPanel';
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="App bg-slate-950">
         <Routes>
-          {/* RUTA PRINCIPAL (Lo que ven tus clientes) */}
+          {/* RUTA PRINCIPAL */}
           <Route path="/" element={
             <>
               <Navbar />
               <Hero />
+              
+              {/* IMPACTO INMEDIATO: El Sorteo se mueve aquí */}
+              <Sorteos /> 
+              
               <About />
               <Services />
-              <Sorteos /> {/* La grilla aparece después de servicios */}
               <Students />
               <Testimonials />
               <Footer />
@@ -35,8 +38,7 @@ function App() {
             </>
           } />
 
-          {/* RUTA DE ADMINISTRACIÓN (Solo para vos) */}
-          {/* Podés cambiar "admin-reparar-2026" por algo más secreto si querés */}
+          {/* RUTA DE ADMINISTRACIÓN */}
           <Route path="/admin-reparar-2026" element={<AdminPanel />} />
         </Routes>
       </div>

@@ -1,227 +1,94 @@
 function Services() {
   const whatsappMessage = encodeURIComponent(
-    "Hola, quiero solicitar un diagnóstico para mi PlayStation. ¿Podés indicarme el costo y tiempo estimado?",
+    "Hola Repar.Ar, solicito una auditoría técnica para mi equipo. ¿Cuál es el protocolo de recepción?"
   );
 
-  const repairCases = [
+  const specializedUnits = [
     {
-      title: "Reparación de fuente · PS4",
+      title: "Recuperación Crítica de Datos",
       description:
-        "Consola que no encendía. Se diagnosticó falla en la fuente de alimentación y se restauró el funcionamiento completo con pruebas de estabilidad.",
-      image: "/images/servicios/ps4-fuente-despues.webp",
-      fallback: "/social-preview.svg",
-      alt: "PlayStation 4 reparada luego de falla de encendido",
+        "Protocolos avanzados para restauración de información en dispositivos de almacenamiento masivo y pendrives con daños físicos.",
+      icon: "💾",
     },
     {
-      title: "Mantenimiento completo",
+      title: "Ingeniería de Consolas",
       description:
-        "Limpieza interna profesional y reemplazo de pasta térmica para reducir temperatura, ruido y prolongar la vida útil del equipo.",
-      image: "/images/servicios/ps4-limpieza-despues.webp",
-      fallback: "/social-preview.svg",
-      alt: "Servicio técnico realizando mantenimiento interno en PlayStation",
+        "Diagnóstico y reparación estructural en PlayStation y hardware de alto rendimiento. Restauración de ciclos de refrigeración y fuentes.",
+      icon: "🎮",
     },
     {
-      title: "Pruebas y entrega final",
+      title: "Soporte de Arquitectura Portátil",
       description:
-        "Verificación completa de funcionamiento, pruebas de temperatura y rendimiento. Entrega con garantía escrita de 45 días.",
-      image: "/images/servicios/ps5-test-entrega.webp",
-      fallback: "/social-preview.svg",
-      alt: "PlayStation funcionando correctamente luego de reparación",
+        "Evaluación y optimización de notebooks, reemplazo de componentes SMD y mantenimiento preventivo nivel industrial.",
+      icon: "💻",
     },
   ];
 
   return (
-    <section id="servicios" className="py-24 px-6 bg-[#0f172a] text-white">
+    <section id="servicios" className="px-6 py-24 text-white border-t bg-slate-900 border-slate-800">
       <div className="max-w-6xl mx-auto">
 
-        {/* Header */}
-        <div className="mb-16 text-center">
-
-          <div className="inline-block px-4 py-1 mb-4 text-sm font-medium text-primary bg-primary/10 rounded-full border border-primary/20">
-            Especialista en PlayStation
-          </div>
-
-          <h2 className="text-4xl font-bold">
-            Servicio técnico profesional para{" "}
-            <span className="text-primary">Consolas PlayStation</span>
+        {/* Header Corporativo */}
+        <div className="mb-20 text-center">
+          <span className="text-blue-500 font-bold tracking-[0.3em] uppercase text-sm">
+            Especialización Táctica
+          </span>
+          <h2 className="mt-4 text-4xl font-extrabold md:text-5xl">
+            Unidades de <span className="text-blue-500">Servicio Avanzado</span>
           </h2>
-
-          <p className="max-w-2xl mx-auto mt-4 text-gray-400">
-            Diagnóstico preciso, mantenimiento preventivo y reparación de fallas
-            reales. Atención técnica especializada en Corrientes Capital.
-          </p>
-
+          <div className="w-24 h-1 mx-auto mt-6 bg-blue-600"></div>
         </div>
 
-        {/* Problemas + proceso */}
-        <div className="grid gap-10 md:grid-cols-2">
-
-          {/* Problemas */}
-          <div className="bg-[#1e293b] p-8 rounded-xl shadow-lg border border-slate-700">
-
-            <h3 className="mb-6 text-2xl font-semibold text-primary">
-              Fallas comunes que solucionamos
-            </h3>
-
-            <ul className="space-y-4 text-gray-300">
-
-              <li className="flex items-center gap-2">
-                <span className="text-primary">●</span>
-                Consola que no enciende
-              </li>
-
-              <li className="flex items-center gap-2">
-                <span className="text-primary">●</span>
-                Apagado repentino o sobrecalentamiento
-              </li>
-
-              <li className="flex items-center gap-2">
-                <span className="text-primary">●</span>
-                Luz azul o errores de arranque
-              </li>
-
-              <li className="flex items-center gap-2">
-                <span className="text-primary">●</span>
-                Fuente de alimentación dañada
-              </li>
-
-              <li className="flex items-center gap-2">
-                <span className="text-primary">●</span>
-                Botones defectuosos
-              </li>
-
-              <li className="flex items-center gap-2">
-                <span className="text-primary">●</span>
-                Ruido excesivo del ventilador
-              </li>
-
-              <li className="flex items-center gap-2">
-                <span className="text-primary">●</span>
-                Mantenimiento preventivo completo
-              </li>
-
-            </ul>
-
-          </div>
-
-          {/* Proceso */}
-          <div className="bg-[#1e293b] p-8 rounded-xl shadow-lg border border-slate-700">
-
-            <h3 className="mb-6 text-2xl font-semibold text-primary">
-              Proceso de trabajo profesional
-            </h3>
-
-            <ol className="space-y-4 text-gray-300">
-
-              <li>
-                <span className="font-semibold text-white">
-                  1. Diagnóstico técnico completo:
-                </span>{" "}
-                identificamos la causa real de la falla.
-              </li>
-
-              <li>
-                <span className="font-semibold text-white">
-                  2. Presupuesto transparente:
-                </span>{" "}
-                confirmás el costo antes de cualquier reparación.
-              </li>
-
-              <li>
-                <span className="font-semibold text-white">
-                  3. Reparación profesional:
-                </span>{" "}
-                servicio técnico con mantenimiento responsable.
-              </li>
-
-              <li>
-                <span className="font-semibold text-white">
-                  4. Entrega con garantía escrita:
-                </span>{" "}
-                cobertura de 45 días en todos los trabajos.
-              </li>
-
-            </ol>
-
-            <a
-              href={`https://wa.me/5491170607386?text=${whatsappMessage}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-6 py-3 mt-8 font-semibold text-black transition rounded-lg bg-primary hover:opacity-90 hover:scale-[1.02] hover:shadow-lg"
-            >
-              Solicitar diagnóstico
-            </a>
-
-          </div>
-
+        {/* Grid de Servicios de Alto Nivel */}
+        <div className="grid gap-8 mb-20 md:grid-cols-3">
+          {specializedUnits.map((unit) => (
+            <div key={unit.title} className="p-8 transition-all border rounded-sm bg-slate-800/50 border-slate-700 hover:border-blue-500 group">
+              <div className="mb-6 text-4xl transition-all grayscale group-hover:grayscale-0">{unit.icon}</div>
+              <h3 className="mb-4 text-xl font-bold tracking-tight text-white uppercase">{unit.title}</h3>
+              <p className="text-sm leading-relaxed text-gray-400">
+                {unit.description}
+              </p>
+            </div>
+          ))}
         </div>
 
-        {/* Casos reales */}
-        <div className="mt-20">
-
-          <div className="mb-10 text-center">
-
-            <h3 className="text-2xl font-bold md:text-3xl">
-              Casos reales de reparación
-            </h3>
-
-            <p className="mt-3 text-gray-400">
-              Ejemplos de trabajos realizados en el taller ReparAr
-            </p>
-
+        {/* Protocolo de Trabajo (Infografía de texto) */}
+        <div className="p-10 border-l-4 border-blue-600 rounded-sm bg-slate-800">
+          <h3 className="mb-8 text-2xl font-bold tracking-wider uppercase">Protocolo de Operación</h3>
+          <div className="grid gap-8 md:grid-cols-4">
+            <div>
+              <span className="text-2xl font-black text-blue-500">01.</span>
+              <h4 className="mt-2 text-xs font-bold tracking-widest text-gray-300 uppercase">Diagnóstico</h4>
+              <p className="mt-2 text-xs text-gray-500">Identificación de fallas mediante análisis de flujo.</p>
+            </div>
+            <div>
+              <span className="text-2xl font-black text-blue-500">02.</span>
+              <h4 className="mt-2 text-xs font-bold tracking-widest text-gray-300 uppercase">Auditoría</h4>
+              <p className="mt-2 text-xs text-gray-500">Presupuesto detallado antes de la intervención física.</p>
+            </div>
+            <div>
+              <span className="text-2xl font-black text-blue-500">03.</span>
+              <h4 className="mt-2 text-xs font-bold tracking-widest text-gray-300 uppercase">Intervención</h4>
+              <p className="mt-2 text-xs text-gray-500">Reparación técnica bajo estándares de laboratorio.</p>
+            </div>
+            <div>
+              <span className="text-2xl font-black text-blue-500">04.</span>
+              <h4 className="mt-2 text-xs font-bold tracking-widest text-gray-300 uppercase">Garantía</h4>
+              <p className="mt-2 text-xs text-gray-500">Certificación de funcionamiento por 45 días.</p>
+            </div>
           </div>
+        </div>
 
-          <div className="grid gap-6 md:grid-cols-3">
-
-            {repairCases.map((item) => (
-              <article
-                key={item.title}
-                className="bg-[#1e293b] rounded-xl overflow-hidden border border-slate-700 hover:border-primary/40 hover:shadow-lg transition duration-300"
-              >
-
-                <img
-                  src={item.image}
-                  alt={item.alt}
-                  loading="lazy"
-                  width="400"
-                  height="300"
-                  className="object-cover w-full h-48"
-                  onError={(event) => {
-                    event.currentTarget.src = item.fallback;
-                  }}
-                />
-
-                <div className="p-5">
-
-                  <h4 className="font-semibold text-white">
-                    {item.title}
-                  </h4>
-
-                  <p className="mt-2 text-sm text-gray-300">
-                    {item.description}
-                  </p>
-
-                </div>
-
-              </article>
-            ))}
-
-          </div>
-
-          {/* CTA final */}
-          <div className="mt-12 text-center">
-
-            <a
-              href={`https://wa.me/5491170607386?text=${whatsappMessage}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-8 py-4 font-semibold text-black transition rounded-lg bg-primary hover:scale-[1.02] hover:shadow-lg"
-            >
-              Consultar por mi consola ahora
-            </a>
-
-          </div>
-
+        {/* CTA Final */}
+        <div className="mt-16 text-center">
+          <a
+            href={`https://wa.me/5491170607386?text=${whatsappMessage}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-12 py-5 bg-blue-600 font-black uppercase tracking-widest text-sm hover:bg-blue-500 transition-all hover:tracking-[0.4em]"
+          >
+            Ingresar Solicitud Técnica
+          </a>
         </div>
 
       </div>

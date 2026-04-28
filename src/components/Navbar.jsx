@@ -9,18 +9,20 @@ function Navbar() {
 
   const navLinks = [
     { name: "Servicios", href: "#servicios" },
+    { name: "Sorteos", href: "#sorteos" }, // Agregado para tu nueva sección
     { name: "Cómo trabajo", href: "#about" },
     { name: "Contacto", href: "#contacto" },
   ];
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-gray-800 bg-darkbg/95 backdrop-blur">
+    // Cambié bg-darkbg por bg-slate-900 y text-primary por text-blue-500
+    <nav className="sticky top-0 z-[100] border-b border-slate-800 bg-slate-900/95 backdrop-blur-sm">
       
       <div className="flex items-center justify-between px-6 py-4 mx-auto max-w-7xl">
         
         {/* Logo */}
         <h1 className="text-2xl font-bold tracking-wide text-white select-none">
-          Repar<span className="text-primary">Ar</span>
+          Repar<span className="text-blue-500">Ar</span>
         </h1>
 
         {/* Desktop navigation */}
@@ -41,30 +43,30 @@ function Navbar() {
           href={`https://wa.me/5491170607386?text=${whatsappMessage}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden px-5 py-2 font-semibold text-white transition-all duration-200 rounded-lg md:block bg-primary hover:opacity-90 hover:scale-105"
+          className="hidden px-5 py-2 font-semibold text-white transition-all duration-200 bg-blue-600 rounded-lg md:block hover:bg-blue-500 hover:scale-105"
         >
           WhatsApp
         </a>
 
         {/* Mobile menu button */}
         <button
-          className="text-white md:hidden text-2xl"
+          className="p-2 text-2xl text-white md:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          ☰
+          {menuOpen ? '✕' : '☰'}
         </button>
 
       </div>
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="px-6 pb-4 space-y-3 border-t border-gray-800 md:hidden bg-darkbg">
+        <div className="px-6 pb-6 space-y-4 border-t border-slate-800 md:hidden bg-slate-900 animate-in fade-in slide-in-from-top-4">
           
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="block text-gray-300 transition hover:text-white"
+              className="block py-2 text-lg text-gray-300 transition hover:text-white"
               onClick={() => setMenuOpen(false)}
             >
               {link.name}
@@ -75,7 +77,7 @@ function Navbar() {
             href={`https://wa.me/5491170607386?text=${whatsappMessage}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="block px-4 py-2 font-semibold text-center text-white rounded-lg bg-primary hover:opacity-90"
+            className="block px-4 py-3 font-semibold text-center text-white bg-blue-600 rounded-lg"
           >
             WhatsApp
           </a>
